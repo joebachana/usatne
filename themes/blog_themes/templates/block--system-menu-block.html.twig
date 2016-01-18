@@ -1,0 +1,16 @@
+{% extends "@classy/block/block--system-menu-block.html.twig" %}
+{#
+/**
+ * @file
+ * Bartik's theme implementation for a menu block.
+ *
+ * @ingroup themeable
+ */
+#}
+{% set show_anchor = "show-" ~ attributes.id|clean_id %}
+{% set hide_anchor = "hide-" ~ attributes.id|clean_id %}
+{% block content %}
+  <div{{ content_attributes.addClass('content') }}>
+    {{ content }}
+  </div>
+{% endblock %}

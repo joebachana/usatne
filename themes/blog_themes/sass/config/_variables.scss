@@ -1,0 +1,80 @@
+/* */
+$light_grey: #ccc;
+$red: #f53e3e;
+$white: #fff;
+$black: #000;
+$dark: #141414;
+$grey: #999;
+
+/*  */
+%box_shadow {
+  box-shadow: 0 0 5px #ccc;
+  -webkit-box-shadow: 0 0 5px #ccc;
+}
+%border_radius{
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+%font_oswald{
+  font-family: 'oswaldregular';
+}
+
+/* BUTTON */
+
+.form-submit {
+  margin: 0 10px 10px 0;
+  border: none;
+  padding: 8px 20px;
+  color: #fff;
+  background: $red;
+  cursor: pointer;
+  @extend %button_effect_3;
+  &:hover, &:focus {
+    background: $white;
+    color: $red;
+  }
+  &:first-child{
+    margin: 0 10px 10px 0;
+  }
+}
+%button_effect{
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  &:hover, &:focus, &:active{
+      -webkit-transform: scale(0.9);
+      transform: scale(0.9);
+    }
+}
+
+%button_effect_2{
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  &:hover, &:focus, &:active{
+      -webkit-transform: scale(0.9);
+      transform: scale(0.9);
+    }
+}
+%button_effect_3{
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+}
+
+%font_awesome {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+}
+
+

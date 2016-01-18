@@ -1,0 +1,174 @@
+.gallery-thumbs, #panel_second {
+    .views-field-field-image {
+        margin: 0 5px 15px 0;
+
+        img {
+            background-color: $white;
+            padding: 3px;
+            border: 3px solid #555;
+        }
+
+        a {
+            &:hover, &:focus {
+                img {
+                    border-style: dashed;
+                }
+            }
+        }
+    }
+}
+
+.view-node {
+    .views-field-created {
+        background: rgba(0, 0, 0, 0) url("../images/bg-date-2.png") no-repeat scroll 100% 0;
+        display: block;
+        margin: 0 0 15px;
+        overflow: hidden;
+        padding: 0;
+        width: 100%;
+        span {
+            display: block;
+            float: right;
+            height: 53px;
+            overflow: hidden;
+            padding: 9px 0 0;
+            width: 103px;
+        }
+    }
+
+    .views-field-created {
+        background: url(../images/bg-date-2.png) no-repeat 100% 0;
+        display: block;
+        margin: 0 0 15px;
+        overflow: hidden;
+        padding: 0;
+        width: 100%;
+        .field-content {
+            display: block;
+            float: right;
+            height: 53px;
+            overflow: hidden;
+            padding: 15px 0 0;
+            width: 103px;
+            color: $white;
+            font-size: 15px;
+        }
+
+        .date-left {
+            display: block;
+            float: left;
+            font-family: 'oswaldregular';
+            font-size: 2em;
+            line-height: 1.2;
+            text-align: center;
+            width: 49px;
+        }
+
+        .date-right {
+            border-left: 1px solid #999;
+            display: block;
+            float: left;
+            line-height: 1.2;
+            text-align: center;
+            text-transform: uppercase;
+            width: 53px;
+        }
+    }
+
+    .views-field-title {
+        font-size: 2em;
+        //width: 80%;
+        line-height: 1.4;
+        margin: -40px 0 30px;
+        padding-right: 130px;
+        text-shadow: 1px 1px 0 black, 1px 2px 0 #333333;
+        font-weight: 500;
+    }
+
+    .views-field-nothing {
+        background: rgba(0, 0, 0, 0) url("../images/bg-info-2.jpg") repeat;
+        border: 0 none;
+        margin-bottom: 30px;
+        padding: 28px;
+        position: relative;
+    }
+
+    .field-author {
+        margin-bottom: 14px;
+    }
+
+    .field-img {
+        margin-bottom: 1em;
+    }
+
+    .group-field-link {
+        margin: 0 10px 5px 0;
+        padding: 0;
+
+        a {
+            border-bottom: 1px dotted $red;
+            margin: {
+                right: 10px;
+                bottom: 5px;
+            };
+
+            &:before {
+                content: "+";
+                margin-right: 5px;
+            }
+            &:hover, &:focus{
+                border-bottom-color: #fff;
+            }
+        }
+    }
+}
+
+.view-node {
+    .views-field-created {
+        span {
+            text-align: center;
+            font-family: "oswaldregular";
+            text-transform: uppercase;
+        }
+    }
+}
+
+.page #main .content .node h2.comment-form__title {
+    margin-top: 0;
+}
+
+.page #main #main-content {
+    .gallery-list {
+        .views-col {
+            float: left;
+        }
+
+        .view-row {
+            @include clearfix;
+
+            margin-bottom: 20px;
+        }
+
+        .views-field-title {
+            margin: 0 10px;
+            padding: 15px;
+            text-align: center;
+            background: #333;
+            border: 1px solid #444;
+
+            img {
+                margin-bottom: 10px;
+            }
+
+            a {
+                min-height: 42px;
+            }
+
+            &:hover, &:focus {
+                border-color: #666;
+
+                @include box-shadow(0 0 5px #000000);
+            }
+        }
+    }
+}

@@ -1,0 +1,79 @@
+/* html.scss */
+body {
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    font-size: 14px;
+    color: $light_grey;
+    background: url(../images/bg-body.jpg) repeat 0 0 #000;
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+header, nav, section, article, figure, aside, footer {
+    display: block;
+}
+
+a {
+    color: $red;
+
+    @extend %button_effect_3;
+}
+
+a:hover, a:hover {
+    text-decoration: none;
+    color: $white;
+}
+
+h1, .h1 {
+    font-size: 1.84em;
+}
+
+h1, .h1, h2, .h2, h3, .h3 {
+    margin: 0 0 15px;
+
+    @extend %font_oswald;
+
+    color: $white;
+}
+
+h2 {
+    font-size: 1.71em;
+
+    @extend %font_oswald;
+}
+
+h2 {
+    @include text-shadow(1px 1px 0 #000, 1px 2px 0 #333);
+}
+
+h4, h5, h6 {
+    margin-bottom: 15px;
+    font-size: 1em;
+    color: $white;
+}
+
+address {
+    margin-bottom: 15px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+input, button, select, textarea {
+    padding: 6px;
+    border: 1px solid #ddd;
+}
+
+label {
+    font-weight: normal;
+}
+
+p {
+    margin-bottom: 15px;
+}

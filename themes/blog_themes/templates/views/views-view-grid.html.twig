@@ -1,0 +1,26 @@
+{% if title %}
+  <h3>{{ title }}</h3>
+{% endif %}
+<div{{ attributes }}>
+{% if options.alignment == 'horizontal' %}
+  {% for row in items %}
+  <div{{ row.attributes }}>
+    {% for column in row.content %}
+    <div{{ column.attributes }}>
+      {{ column.content }}
+    </div>
+    {% endfor %}
+  </div>
+  {% endfor %}
+{% else %}
+  {% for column in items %}
+  <div{{ column.attributes }}>
+    {% for row in column.content %}
+      <div{{ row.attributes }}>
+        {{ row.content }}
+      </div>
+    {% endfor %}
+    </div>
+  {% endfor %}
+{% endif %}
+</div>

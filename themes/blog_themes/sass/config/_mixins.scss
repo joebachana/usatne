@@ -1,0 +1,127 @@
+@mixin clearfix {
+    &:after {
+        content: ".";
+        clear: both;
+        display: block;
+        visibility: hidden;
+        height: 0;
+    }
+}
+
+@mixin fontawesome {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin sprites {
+    background-image: url(../images/sprites.png);
+    background-repeat: no-repeat;
+}
+
+@mixin border-radius($number...) {
+    border-radius: $number;
+    -webkit-border-radius: $number;
+}
+
+@mixin box-shadow($val...) {
+    box-shadow: $val;
+    -webkit-box-shadow: $val;
+}
+
+@mixin text-shadow($val...) {
+    text-shadow: $val;
+    -webkit-text-shadow: $val;
+}
+
+@mixin transition($val...) {
+    -webkit-transition: $val;
+    -moz-transition: $val;
+    -o-transition: $val;
+    transition: $val;
+}
+
+@mixin opacity($opacity) {
+    opacity: $opacity;
+
+    // IE8 filter
+    $opacity-ie: $opacity * 100;
+
+    filter: #{alpha(opacity = $opacity-ie)};
+}
+
+@mixin translate($val...) {
+    -webkit-transform: translate($val);
+    -moz-transform: translate($val);
+    -o-transform: translate($val);
+    transform: translate($val);
+}
+
+@mixin scale($val...) {
+    -webkit-transform: scale($val);
+    -moz-transform: scale($val);
+    -o-transform: scale($val);
+    transform: scale($val);
+}
+
+@mixin rotate($val) {
+    -ms-transform: rotate($val);
+
+    /* IE 9 */
+    -webkit-transform: rotate($val);
+
+    /* Chrome, Safari, Opera */
+    transform: rotate($val);
+}
+
+@mixin transform-origin($val) {
+    -webkit-transform-origin: inherit;
+    -moz-transform-origin: inherit;
+    -ms-transform-origin: inherit;
+    -o-transform-origin: inherit;
+    transform-origin: inherit;
+}
+
+@mixin animation($val) {
+    -webkit-animation: $val;
+    -moz-animation: $val;
+    -o-animation: $val;
+    animation: $val;
+}
+
+/* Placeholder */
+@mixin placeholder($color) {
+    &::-webkit-input-placeholder {
+        color: $color;
+    }
+
+    &:-moz-placeholder {
+        /* older Firefox*/
+        color: $color;
+    }
+
+    &::-moz-placeholder {
+        /* Firefox 19+ */
+        color: $color;
+    }
+
+    &:-ms-input-placeholder {
+        color: $color;
+    }
+
+    &:-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        color: $color;
+        opacity: 1;
+    }
+
+    &::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        color: $color;
+        opacity: 1;
+    }
+}

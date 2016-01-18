@@ -1,0 +1,30 @@
+global-styling:
+  version: VERSION
+  css:
+    theme:
+      includes/bootstrap/css/bootstrap.css: {}
+      includes/fontawesome/css/font-awesome.css: {}
+      includes/fonts/oswald_regular/stylesheet.css: {}
+      includes/slick/slick/slick.css: {}
+      includes/slick/css/style.css: {}
+      css/monokai/monokai.min.css: {}
+      css/style.css: {}
+      css/colors.css: {}
+  js:
+    js/jquery.smooth-scroll.js: {}
+    includes/flexslider/jquery.flexslider.js: {}
+    includes/matchheight/jquery.matchHeight.js: {}
+    js/mobile_menu.js: {}
+    js/slideshow.js: {}
+    includes/slick/slick/slick.js: {}
+    js/carousel.js: {}
+    includes/bootstrap/js/bootstrap.js: {}
+    js/fix_script.js: {}
+    js/personal_blog.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - core/drupal.ajax
+    - core/drupal.progress
+    - core/jquery.once
